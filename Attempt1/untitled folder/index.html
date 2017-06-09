@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="romanApp">
+<head>
+	<title>99% Invisible</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-controller="romanCtrl">
+<header>
+<div class="header-content">
+	<div id="top-row">
+		<div id="region-select">
+		&nbsp
+		</div>
+	</div>
+	<div id="masthead">
+		<div class="logo">
+				<h1><a href="#"><span style="color:#ffd300">99%</span> INVISIBLE</a></h1>
+		</div>
+		<div class="masthead-space">&nbsp</div>
+		<div class="main-search">
+			<input type="text" name="search">
+			<button>Search</button>
+		</div>
+		<div class="language-select">
+			<a>English</a>
+		</div>
+	</div>
+	<div id="main-nav">
+		<ul class="nav-tabs">
+			
+		</ul>
+		<ul>
+			
+		</ul class="about-tabs">
+	</div>
+</div>
+</header> 
+<div id="wrap">
+<div class="oc">
+	<main class="main">
+	<section class="content-container">
+	<div ng-repeat="fed in feed" class="content-blocks">
+		<article class="episode">
+			<div class="episode-content">
+				<a class="episode-image" href="{{fed.link}}">
+				<div style="width: 80%">
+				<div class="episode-type">
+					Episode
+				</div>
+				<div class="episode-name">
+					{{fed.title}}
+				</div>
+
+				</div>
+
+				</a>
+				<a class="play-button" href="#"></a>
+				<div class="episode-meta">
+					<div class="episode-meta-date">{{fed.pubDate}}</div>
+					<a class="episode-meta-category" href="#"></a>
+					<div class="episode-actions"></div>
+				</div>
+			</div>
+		</article>
+	</div>
+	</section>
+	<div c1ass="page-select"></div>
+<!-- 	{{feed}} -->
+	</main>
+	<aside class="side-bar">
+		
+	</aside>
+
+</div>
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="romanApp.js"</script>
+</body>
+</html>
