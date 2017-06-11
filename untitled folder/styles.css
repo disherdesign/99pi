@@ -4,6 +4,7 @@
 	padding: 0;
 	font-family: sans-serif;
 	text-decoration: none;
+
 }
 
 a {
@@ -13,6 +14,7 @@ a {
 
 a:active, a:focus, a:hover {
     color: #bf9e00;
+
 }
 
 a:active, a:hover {
@@ -57,6 +59,7 @@ header {
 	 position: relative;
 	 width: inherit;
 	 height: inherit;
+
 }
 
 .episode-image {
@@ -68,7 +71,8 @@ header {
     background-image: url('./placeholder-400x400.jpg');
     display: flex;
     align-items: flex-end;
-    color: black
+    color: black;
+
 
 }
 
@@ -77,11 +81,13 @@ header {
 	background-color: hsla(0,0%,100%,.9);
 	padding: 18px 14px 8px;
 	margin-top: -10px;
+
 }
 
 .episode-name:hover, .episode-name:active, .episode-name:focus {
 	background-color: hsla(49,100%,50%,.9);
 	color: black;
+
 }
 
 .episode-type {
@@ -96,7 +102,16 @@ header {
 	width: 78%;
 	border-top:1px solid;
 	margin: auto;
+	display: flex;
+	justify-content: space-between;
 }
+
+.episode-meta-date {
+	border-right: 1px solid #231f20;
+	
+}
+
+
 .main{
 	width: 768px;
 	margin-bottom: 80px;

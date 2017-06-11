@@ -56,8 +56,8 @@
 				</a>
 				<a class="play-button" href="#"></a>
 				<div class="episode-meta">
-					<div class="episode-meta-date">{{fed.pubDate}}</div>
-					<a class="episode-meta-category" href="#"></a>
+					<div class="episode-meta-date">{{moment(fed.pubDate).format('MM.DD.YY')}}</div>
+					<a class="episode-meta-category" href="#">History</a>
 					<div class="episode-actions"></div>
 				</div>
 			</div>
@@ -73,11 +73,16 @@
 
 </div>
 </div>
+<sound-manager></sound-manager>
 
 
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="moment.js"></script>
+<script src="angular-soundmanager2.js"></script>
 <script src="romanApp.js"</script>
+
+
 </body>
 </html>
