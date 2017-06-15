@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html ng-app="romanApp">
+<head>
+	<title>99% Invisible</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body ng-controller="romanCtrl">
+
+<header class="grid">	
+<div class="header-content ">
+	<div id="top-row">
+		<div id="region-select">
+		&nbsp
+		</div>
+	</div>
+	<div id="masthead">
+		<div class="logo">
+		<div class="brand">
+				<div id="pi-logo" class="logo-desktop">
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+					</div>
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+					</div>
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>						
+					</div>
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>						
+					</div>
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>						
+					</div>
+					<div class="row">
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>						
+					</div>
+					<div class="row">
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>
+						<div class="square"></div>						
+					</div>
+					<div class="row">
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>			
+					</div>
+					<div class="row">
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+					</div>
+					<div class="row">
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>
+						<div class="square dark"></div>	
+						<img style="z-index:99 ; width: 112px; height: 22px;position: absolute; margin-left: -128px; bottom:15px" src="http://99percentinvisible.org/app/themes/invisible/dist/images/99pi_logo_text.png" width="112" height="22" id="logo-text" alt="99% Invisible">				
+					</div>
+				</div>
+				</div>
+				<br><br>
+		</div>
+		<div class="masthead-space">&nbsp</div>
+		<div class="main-search">
+			<input ng-model="searchText" placeholder="Search" type="text" name="search">
+		</div>
+		<div class="language-select">
+			<a href="#">store</a>
+		</div>
+	</div>
+	<div id="main-nav">
+		<ul class="nav-tabs">
+			
+		</ul>
+		<ul>
+			
+		</ul class="about-tabs">
+	</div>
+</div>
+</header>
+
+<br> 
+<div id="wrap">
+<div class="oc">
+    <ui-view></ui-view>
+
+    <filter-side-bar></filter-side-bar>
+    
+
+
+
+		
+
+	                <div class="seekBase" seek-atrack>
+                    <div class="seekLoad" ng-style="{width : ( progress + '%' ) }">
+                    </div>
+                	</div>
+
+</div>
+</div>
+<sound-manager></sound-manager>
+<div class="oc">
+							<div class="player-bar">
+                <!-- init soundManager2 player -->
+                <sound-manager></sound-manager>
+
+                
+                <p style="font-size: .75em">
+                {{ currentPlaying.title }} <span style="float: right;"> {{ currentPostion }} | {{ currentDuration }}</span></p>
+                
+
+                <div class="seekBase" seek-track>
+                    <div class="seekLoad" ng-style="{width : ( progress + '%' ) }"></div>
+                </div>
+                
+<!--                 <button play-music>Play</button>
+                -
+                <button pause-music>Pause</button>
+                -
+                <button stop-music>Stop</button>
+                -
+                <button repeat-music>Repeat ({{ repeat }})</button>
+                - -->
+
+                <div style="margin-top: 5px; font-size: .75em">
+                <button play-pause-toggle data-play="Play!" data-pause="Pause!">Play Toggle</button> - 
+
+                <button prev-track>Prev Track</button> - 
+
+                <!-- Is Playing: {{ isPlaying }} -->
+                <button music-volume data-type="decrease">-</button>
+                Volume: {{ volume }} 
+                <button music-volume data-type="increase">+</button>
+              
+                <button mute-music>Mute ({{ mute }})</button> - 
+     
+                <button next-track>Next Track</button>
+                </div>
+<!--                 -
+                <button clear-playlist>Clear Playlist</button>
+                <br/> -->
+                
+            </div>
+            </div>
+
+
+
+                
+<!--                 <div class="playlist">
+                <h5>Playlist</h5>
+                <ul>
+                    <li ng-repeat="song in playlist">
+                        <a play-from-playlist="song">{{ song.title }}</a>
+                        -
+                        <a remove-from-playlist="song" data-index="{{$index}}">
+                            <small>(remove)</small>
+                        </a>
+                        <span ng-if="currentPlaying.id == song.id"> - (current)</span>
+                    </li>
+                </ul>
+                </div>
+            </div> -->
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+<script src="./libraries/moment.js"></script>
+<script src="./libraries/angular-soundmanager2.js"></script>
+<script src="romanApp.js"</script>
+
+
+</body>
+</html>

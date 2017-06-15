@@ -1,0 +1,436 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	text-decoration: none;
+	transition: background-color 500ms;
+
+}
+
+h1, h2, h3 {
+	font-family: serif;
+	font-weight: normal;
+}
+
+a {
+	color: black;
+	background-color: transparent;
+}
+
+a:active, a:focus, a:hover {
+    color: #bf9e00;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+body {
+	font-family: Open Sans,sans-serif;
+}
+
+header {
+	height: 111px;
+	border-bottom: 1px solid #999;
+	margin-bottom: 68px
+
+}
+
+form {
+	margin-top: 0em;
+}
+
+input {
+	background-color: #4d4d4d;
+	border-style: none;
+	height: 20px;
+	color: white;
+	outline: none;
+}
+
+#filter {
+	background-color: #f7f7f7;
+}
+aside {
+	display: none;
+}
+
+@media screen and (min-width: 1100px) {
+aside {
+    display: block;
+    width: 300px;
+}
+}
+
+
+.brand {
+	font-size: 0;
+    display: block;
+    left: 100px;
+    position: static;
+    padding: 15px 0;
+    z-index: 1;
+    margin-top: -26px;
+    padding: 0;
+    width: 132px;
+    box-sizing:content-box;
+    padding-bottom: 10px
+
+
+}
+.row {
+	display: block;
+	height: 13px;
+
+}
+
+
+
+.logo-desktop {
+	position: relative;
+/*    border: 1px solid #595a5c;
+*/
+}
+.square {
+	display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-right: 1px solid #595a5c;
+    border-bottom: 1px solid #595a5c;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: relative;
+    background-color: #231f20;
+    transition: background-color .6s;
+
+
+}
+
+.filter {
+	cursor: pointer;
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    outline: 1px solid #231f20;
+    vertical-align: -3px;
+    margin-right: 8px;
+    border: 4px solid #ffd300;
+    background-color: #4d4d4d;
+}
+
+
+.header-content {
+	height: 100%;
+
+/*	margin: 0 auto 0 auto;*/
+	max-width: 71.875em;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+
+}
+
+.oc {
+	max-width: 71.5em;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+/*.oc {
+	max-width: 46.25em;
+	margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+@media screen and (min-width: 920px) {
+.new-lower-leaderboard, .oc {
+    max-width: 57.5em;
+}
+}
+
+@media screen and (min-width: 1100px) {
+.new-lower-leaderboard, .oc {
+    max-width: 68em;
+}
+}*/
+
+#wrap > .oc {
+	display: flex;
+	justify-content: space-between;
+}
+
+.side-bar {
+
+}
+
+#filter {
+	
+}
+
+
+.episode {
+	width: 336px;
+	margin-bottom: 40px;
+	display: block;
+	height: 318px;
+
+}
+
+.episode-content {
+	 position: relative;
+	 width: inherit;
+	 height: inherit;
+}
+
+.episode-image {
+	width: 100%;
+    height: 280px;
+    position: relative;
+    justify-content: center;
+    background-size: cover;
+    background-image: url('./placeholder-400x400.jpg');
+    display: flex;
+    align-items: flex-end;
+    color: black
+
+}
+
+.episode-name {
+
+	background-color: hsla(0,0%,100%,.9);
+	padding: 18px 14px 8px;
+	margin-top: -10px;
+}
+
+.episode-name:hover, .episode-name:active, .episode-name:focus {
+	background-color: hsla(49,100%,50%,.9);
+	color: black;
+}
+
+.episode-type {
+	    background-color: hsl(49,100%,50%);
+	    color: #231f20; 
+	    margin-left:15px;
+	    display: inline;
+	    padding:4px 10px;
+	    font-size: .65em;
+	    font-weight:bold;
+}
+
+.episode-meta {
+	display: flex;
+	width: 78%;
+	border-top:1px solid;
+	margin: auto;
+	justify-content: flex-start;
+	font-size: .75em;
+	font-weight: bold;
+	position: relative;
+
+}
+
+.episode-meta span {
+	font-size: .6em;
+	font-weight: bold;
+}
+
+.episode-meta-date {
+	display: block;
+	border-right: 1px solid;
+	padding-right: 10px
+
+}
+.episode-meta-category {
+		padding-left: 10px;
+}
+
+.episode-actions {
+	display: flex;
+	position: absolute;
+	right: 0
+}
+
+
+.main{
+	width: 768px;
+	margin-bottom: 80px;
+
+
+}
+
+.content-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.sidebar
+
+
+
+#top-row {
+	height: 18px;
+	margin: 0 auto 7px auto;
+
+}
+
+.region-select {
+	height: 18px
+}
+
+#masthead {
+	height: 41px;
+/*	margin: 0 auto 16px auto;*/
+	margin-top: 55px;
+	display: flex;
+	background-color: #4d4d4d;
+	box-shadow: 0 0 5px 1px rgba(0,0,0,0.3);
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 100%
+	
+
+
+}
+
+.logo {
+	height: 41px;
+	flex: .5;
+	margin: auto;
+	text-decoration-color: #fff;
+	text-align: center;
+	background-color: #4d4d4d;
+
+	position: relative;
+
+}
+
+.logo.thin h1 {
+	font-weight: thin;
+}
+
+
+
+.logo a {
+	font-size: 23px;
+	font-weight: bold;
+	margin: auto;
+	padding: auto;
+	text-align: center;
+	margin: 1px 0 1px 1px; 
+	height: 39px;
+	color: #fff;
+	text-decoration: none;
+}
+
+.masthead-space {
+	flex: 0.0;
+}
+
+.main-search {
+	margin: auto;
+	flex: 8;
+	text-align: center;
+}
+
+.main-search input {
+	width: 70%;
+}
+
+
+
+.language-select {
+	text-decoration-color: white;
+	text-align: center;
+	flex: 1;
+	justify-content: center;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	margin: auto;
+
+}
+
+#main-nav {
+	height: 29px;
+
+}
+
+::selection {
+    background-color: #ffd300;
+}
+
+.play-button {
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+    background-color: rgba(0,0,0,.4);
+    display: flex;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 90px;
+    left: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.play-button img {
+    margin: auto;
+    width: 20px;
+    height: auto;
+    position: relative;
+    left: 2px;
+/*    transform: translateX(-50%);*/
+
+}
+
+.play-button:hover, .play-button:active, .play-button:focus {
+	background-color: hsl(49,100%,50%);
+	color: black;
+}
+
+.player-bar {
+	position: fixed;
+	bottom: 0;
+	background-color: #231f20;
+	color: white;
+	width: 768px;
+	padding: 10px;
+	border-top-left-radius: 10px; 
+	border-top-right-radius: 10px;
+}
+
+
+.seekBase {
+	height: 10px;
+	background-color:hsla(0,0%,100%,.9);
+}
+
+.seekLoad {
+	height: 10px;
+	background-color: hsla(49,100%,50%,.9);
+	color: black;
+
+}
+
+.playlist {
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	height: 100px;
+	width:500px;
+}
+
+/*.playlist > ul {
+	display: flex;
+	position: absolute;
+	height: inherit;
+}
+
+.playlist > ul > li{
+	position: absolute;
+	height: inherit;
+}*/

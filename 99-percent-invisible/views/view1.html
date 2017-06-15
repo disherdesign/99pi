@@ -1,0 +1,40 @@
+	<main class="main">
+	<section class="content-container">
+	<div ng-repeat="post in feed | filter: searchText" class="content-blocks">
+		<article class="episode">
+			<div class="episode-content">
+				<a class="episode-image" href="{{post.link}}">
+				<div style="width: 80%">
+				<div class="episode-type">
+					EPISODE {{post.episodeNum}}
+				</div>
+				<div class="episode-name">
+					<h3>{{post.title}}</h3>
+				</div>
+
+				</div>
+
+
+				</a>
+				<a class="play-button" music-player="play" add-song="post.playerData" class="ng-binding ng-isolate-scope" href="">
+					<img src="./images/icon-play-white.png"/>
+				</a>
+				
+				
+					
+				
+				<div class="episode-meta">
+					<div class="episode-meta-date"><span>DATE</span><br>{{moment(post.pubDate).format('MM.DD.YY')}}</div>
+					<a class="episode-meta-category" href="#"><span>CATEGORY</span><br>Podcast</a>
+					<br><div class="episode-actions">
+						<br><a music-player="" add-song="post.playerData" class="ng-isolate-scope">+</a>&nbsp<span style="border-left: 1px solid; font-size: 1em"><a href="{{post.enclosure.link}}">&nbspDownload</a></span>
+					</div>
+				</div>
+			</div>
+		</article>
+	</div>
+	</section>
+	<div c1ass="page-select"></div>
+<!-- 	{{feed}} -->
+
+	</main>
